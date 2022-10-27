@@ -1,5 +1,5 @@
 # comando input (): quero permitir que o usuário digite algo
-nome = input("Digite seu nome: ")
+nome = input("Informe seu nome: ")
 # Variável idade
 idade = int (input ("Legal! Digite sua idade, " + nome + ": "))
 genero = input ("Qual o seu gênero? \n M - Masculino \n F - Feminino \n")
