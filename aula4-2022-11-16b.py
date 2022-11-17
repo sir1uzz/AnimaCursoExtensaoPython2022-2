@@ -8,15 +8,11 @@ conexao = sqlite3.connect("dc_universe.db")
 cursor = conexao.cursor()
 
 # 4o. passo: Comando SQL do banco
-sql = "SELECT pessoa_id, nome, nome_civil, tipo FROM pessoas"
+sql = "INSERT INTO pessoas (pessoa_id, nome, nome_civil, tipo) VALUES (12, 'Ravena', 'Rachel Roth', 'Herói(na)')"
 
 # 5o. passo: Executar o comando SQL no SQLlite (no cursor)
 cursor.execute(sql)
 
-# 6o. passo: Exibir a consulta com todos os nomes de heróis e vilões do banco de dados
-pessoas = cursor.fetchall()
-for pessoa in pessoas:
-  print (pessoa)
-
-for pessoa in pessoas:
-  print(f"Nome: {pessoa[1]} {pessoa[3]}")
+# 6o. passso: Confirma o INSERT com commit() e fecha o banco
+conexao.commit()
+conexao.close()
